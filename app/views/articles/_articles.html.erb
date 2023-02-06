@@ -1,0 +1,6 @@
+<%= turbo_frame_tag "articles" do %>
+<% articles.each do |t|%>
+<p><%= link_to  t.title, "articles/#{t.id}"%></p>
+<% end %>
+<% end %>
+
