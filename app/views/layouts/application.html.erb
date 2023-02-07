@@ -13,10 +13,15 @@
   <body>
 
 
-    <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
+   <div class="container">
+      <%= render "layouts/navbar" %>
+      <% flash.each do |type, msg| %>
+      <div class="alert alert-info">
+        <%= msg %>
+      </div>
+      <% end %>
 
     <%= yield %>
+    </div>
   </body>
 </html>
